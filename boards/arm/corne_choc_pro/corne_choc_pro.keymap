@@ -12,8 +12,12 @@
 / {
     behaviors{
         hm: hold_tap {
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_MOD";
+            tapping-term-ms = 200;
+            #binding-cells = ;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
     };
     keymap {
