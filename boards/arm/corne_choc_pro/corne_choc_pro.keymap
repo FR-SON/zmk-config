@@ -14,7 +14,7 @@
         hm: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_MOD";
-            tapping-term-ms = 200;
+            tapping-term-ms = <200>;
             #binding-cells = <2>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
