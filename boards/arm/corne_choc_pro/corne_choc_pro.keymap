@@ -14,7 +14,7 @@
         hm: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_MOD";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             #binding-cells = <2>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -31,10 +31,10 @@
             // | CAPSW |  Z  |  X  |  C  |  D  |  V  |             |  K  |  H   |  ,  |  .  |  /   | LAYER 3  |
             //                     | GUI | LWR | SPC |             | ENT | RSE  | DEL |
             bindings = <
-                &kp ESC      &kp Q          &kp W          &kp F          &kp P          &kp B &kp C_MUTE                          &kp C_VOLUME_UP &kp J       &kp L          &kp U          &kp Y          &kp SEMI       &kp BSPC
-                &kp TAB      &hm LSHFT A    &hm LCTRL R    &hm LALT S     &hm LGUI T     &kp G &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp C_VOLUME_DOWN &kp M     &hm RGUI N     &hm RALT E     &hm RCTRL I    &hm RSHFT O    &kp SQT
-                &caps_word   &kp Z          &kp X          &kp C          &kp D          &kp V                                     &kp K     &kp H             &kp COMMA      &kp DOT        &kp FSLH       &mo 3
-                                                                          &kp LGUI &mo 1 &kp RET                                   &kp SPACE &mo 2             &kp DEL
+                &kp ESC      &kp Q          &kp W          &kp F          &kp P          &kp B &kp C_MUTE                          &kp C_VOLUME_UP    &kp J     &kp L        &kp U          &kp Y          &kp SEMI       &kp BSPC
+                &kp TAB      &hm LSHFT A    &hm LCTRL R    &hm LALT S     &hm LGUI T     &kp G &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp C_VOLUME_DOWN  &kp M     &hm RGUI N   &hm RALT E     &hm RCTRL I    &hm RSHFT O    &kp SQT
+                &caps_word   &kp Z          &kp X          &kp C          &kp D          &kp V                                                        &kp K     &kp H        &kp COMMA      &kp DOT        &kp FSLH       &mo 3
+                                                                          &kp LGUI &mo 1 &kp RET                                                      &kp SPACE &mo 2        &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -47,10 +47,10 @@
             // | SHFT | BTCR| RGB | RST | BOOT| Unlock|        |       |     |     |     |     |     |      |
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
             bindings = <
-                &kp TAB   &kp N1       &kp N2          &kp N3       &kp N4       &kp N5       &kp LCTRL &kp RCTRL &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-                &kp LCTRL &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LALT  &kp RALT  &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-                &kp LSHFT &bt BT_CLR   &rgb_ug RGB_TOG &sys_reset   &bootloader  &studio_unlock                   &trans   &trans   &trans &trans    &trans &trans
-                                                       &kp LGUI     &trans       &kp SPACE                        &kp LGUI &trans   &kp SPACE
+                &trans           &kp N1           &kp N2           &kp N3            &kp N4           &kp N5          &bt BT_SEL 0      &kp RCTRL         &kp N6   &kp N7   &kp N8   &kp N9 &kp N0    &kp BSPC
+                &trans           &trans           &trans           &trans            &trans           &trans          &bt BT_NXT        &kp C_PLAY_PAUSE  &kp BSP  &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp DEL
+                &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD                                     &trans   &trans   &trans   &trans &trans    &trans
+                                                                   &trans            &trans           &trans                                              &trans   &trans   &trans
             >;
         };
 
@@ -62,10 +62,20 @@
             // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |               | ENT |     | ALT |
             bindings = <
-                &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp LCTRL &kp RCTRL &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &trans   &trans &trans   &trans   &trans    &kp LALT  &kp RALT  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
-                &kp LSHFT &trans   &trans &trans   &trans   &trans                        &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
-                                          &kp LGUI &trans   &kp SPACE                     &kp RET   &trans    &kp RALT
+                &kp GRAVE  &kp EXCL &kp AT   &kp HASH &kp DLLR  &kp PRCNT &kp LCTRL &kp RCTRL &kp AMPS  &kp LPAR  &kp RPAR &kp LBRC  &kp RBRC  &trans
+                &trans     &trans   &trans   &trans   &trans   &trans     &kp LALT  &kp RALT  &kp ASTRK &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
+                &trans     &trans   &trans   &trans   &trans   &trans                         &trans    &kp UNDER &kp PLUS  &trans   &kp PIPE  &kp TILDE
+                                             &trans   &trans   &trans                         &trans    &trans    &trans 
+            >;
+        };
+
+        admin_layer {
+            display-name = "ADMIN";
+            bindings = <
+            &bootloader   &sys_reset     &bt BT_CLR    &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_EFR   &trans     &trans     &trans    &trans    &trans    &trans    &trans    &trans
+            &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI   &trans     &trans     &trans    &trans    &trans    &trans    &trans    &trans
+            &trans        &out OUT_USB   &out OUT_BLE  &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD                         &trans    &trans    &trans    &trans    &trans    &trans
+                                                       &studio_unlock  &trans          &trans                                  &trans    &trans    &trans
             >;
         };
 
