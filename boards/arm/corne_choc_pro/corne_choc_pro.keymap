@@ -14,7 +14,7 @@
         hm: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_MOD";
-            tapping-term-ms = <500>;
+            tapping-term-ms = <1000>;
             #binding-cells = <2>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -33,7 +33,7 @@
             //                     | GUI | LWR | SPC |             | ENT | RSE  | ALT |
             bindings = <
                 &kp ESC  &kp Q          &kp W          &kp F          &kp P          &kp B &kp C_MUTE &kp C_PP &kp J &kp L          &kp U       &kp Y          &kp SCLN       &kp BSPC
-                &kp TAB  &hm LSHFT A    &hm LCTRL R    &hm LALT S     &hm LGUI T     &kp G &kp LALT   &kp RALT &kp M &hm RGUI N     &hm RALT E  &hm RCTRL I    &hm RSHFT O    &kp SQT
+                &kp TAB  &hm LSHFT A    &hm LCTRL R    &kp S     &hm LGUI T     &kp G &kp LALT   &kp RALT &kp M &hm RGUI N     &hm RALT E  &hm RCTRL I    &hm RSHFT O    &kp SQT
                 &trans   &kp Z          &kp X          &kp C          &kp D          &kp V                     &kp K &kp H          &kp COMMA   &kp DOT        &kp FSLH       &kp ESC
                                                                       &kp LGUI &mo 1 &kp SPACE                 &kp RET &mo 2 &kp RALT
             >;
