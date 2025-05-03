@@ -26,15 +26,15 @@
         default_layer {
             display-name = "Colemak Mod-DH";
             // ------------------------------------------------------------------------------------
-            // | ESC |  Q  |  W  |  F  |  P  |  B  | MUTE |  PP   |  J  |  L   |  U  |  Y  |  ;   | BSPC |
-            // | TABL |A/SFT|R/CTL|S/ALT|T/GUI|  G  | LALT | RALT  |  M  |N/GUI |E/ALT|I/CTL|O/SFT |  '   |
-            // | -.- |  Z  |  X  |  C  |  D  |  V  |             |  K  |  H   |  ,  |  .  |  /   | ESC  |
-            //                     | GUI | LWR | SPC |             | ENT | RSE  | ALT |
+            // | ESC |  Q  |  W  |  F  |  P  |  B  | MUTE     |  VOL_UP   |  J  |  L   |  U  |  Y  |  ;   | BSPC |
+            // | TABL |A/SFT|R/CTL|S/ALT|T/GUI|  G  | ALL_WIN | VOL_DOWN  |  M  |N/GUI |E/ALT|I/CTL|O/SFT |  '   |
+            // | CAPSW |  Z  |  X  |  C  |  D  |  V  |             |  K  |  H   |  ,  |  .  |  /   | LAYER 3  |
+            //                     | GUI | LWR | SPC |             | ENT | RSE  | DEL |
             bindings = <
-                &kp ESC  &kp Q          &kp W          &kp F          &kp P          &kp B &kp C_MUTE &kp C_PP &kp J &kp L          &kp U       &kp Y          &kp SCLN       &kp BSPC
-                &kp TAB  &hm LSHFT A    &hm LCTRL R    &hm LALT S     &hm LGUI T     &kp G &kp LALT   &kp RALT &kp M &hm RGUI N     &hm RALT E  &hm RCTRL I    &hm RSHFT O    &kp SQT
-                &trans   &kp Z          &kp X          &kp C          &kp D          &kp V                     &kp K &kp H          &kp COMMA   &kp DOT        &kp FSLH       &kp ESC
-                                                                      &kp LGUI &mo 1 &kp SPACE                 &kp RET &mo 2 &kp RALT
+                &kp ESC      &kp Q          &kp W          &kp F          &kp P          &kp B &kp C_MUTE                          &kp C_VOLUME_UP &kp J       &kp L          &kp U          &kp Y          &kp SEMI       &kp BSPC
+                &kp TAB      &hm LSHFT A    &hm LCTRL R    &hm LALT S     &hm LGUI T     &kp G &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp C_VOLUME_DOWN &kp M     &hm RGUI N     &hm RALT E     &hm RCTRL I    &hm RSHFT O    &kp SQT
+                &caps_word   &kp Z          &kp X          &kp C          &kp D          &kp V                                     &kp K     &kp H             &kp COMMA      &kp DOT        &kp FSLH       &mo 3
+                                                                          &kp LGUI &mo 1 &kp RET                                   &kp SPACE &mo 2             &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
