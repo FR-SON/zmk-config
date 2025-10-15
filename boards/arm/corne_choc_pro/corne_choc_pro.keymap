@@ -83,9 +83,9 @@
         f_layer {
             display-name = "FUNCTIONS";
             bindings = <
-                &trans &trans &trans &trans &trans &trans &trans &trans &kp FN1 &kp FN2 &kp FN3 &kp FN4 &kp FN5 &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &kp FN6 &kp FN7 &kp FN8 &kp FN9 &kp FN10 &trans
-                &trans &trans &trans &trans &trans &trans               &kp FN11 &kp FN12 &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
+                &trans &trans &trans &trans &trans &trans               &kp F11 &kp F12 &trans &trans &trans &trans
                                         &trans &trans &trans               &trans &trans &trans       
             >;
         };
