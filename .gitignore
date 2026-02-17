@@ -1,1 +1,4 @@
 .DS_Store
+
+# ignore the directory where the keyboard firmware is stored
+/corne
